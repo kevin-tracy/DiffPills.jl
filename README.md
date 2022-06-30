@@ -1,5 +1,9 @@
 # DiffPills.jl
 
+<p align="center">
+  <img width="600" src="https://github.com/kevin-tracy/DiffPills.jl/blob/master/extras/images/diff_pills_logo.png">
+</p>
+
 DiffPills.jl is a tool for computing proximity between two pill-shaped objects, and providing analytical smooth gradients of this operation.
 
 ## basic usage
