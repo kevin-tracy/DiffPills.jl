@@ -1,5 +1,5 @@
 __precompile__(true)
-module DiffPills
+module DifferentialProximity
 
 using LinearAlgebra
 using StaticArrays
@@ -18,4 +18,3 @@ include("polygons/proximity_jacobians.jl")
 include("capsule_v_polygon/proximity.jl")
 
 end # module
-
