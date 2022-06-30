@@ -1,5 +1,5 @@
 using Test
-import DifferentialProximity as DP
+import DiffPills as DP
 using StaticArrays
 using LinearAlgebra
 import ForwardDiff as FD
