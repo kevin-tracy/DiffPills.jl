@@ -1,0 +1,4 @@
+name = "DiffPills"
+uuid = "3e4cc9f2-8441-4c5d-8348-095187c8d7fb"
+authors = ["Kevin Tracy <kevt.laser@gmail.com>"]
+version = "0.1.0"
