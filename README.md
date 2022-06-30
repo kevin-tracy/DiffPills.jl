@@ -7,11 +7,12 @@ DiffPills.jl is a tool for computing proximity between two pill-shaped objects, 
 ## basic usage
 
 ```julia
-import DifferentialProximity as dp
+using StaticArrays
+import DiffPills as dp
 
 # create the pill objects (with :MRP or :quat for attitude)
-pill_1 = create_pill(:MRP)
-pill_2 = create_pill(:MRP)
+pill_1 = dp.create_capsule(:MRP)
+pill_2 = dp.create_capsule(:MRP)
 
 # put position, attitude (MRP), radius, and length in
 pill_1.r = @SVector randn(3);   pill_2.r = @SVector randn(3)
@@ -20,8 +21,8 @@ pill_1.R = 0.75;                pill_1.R = 1.5
 pill_1.L = 3.0;                 pill_1.L = 2.0
 
 # calculate proximity
-ℓ = dp.pill_proximity(pill_1, pill_2)
+ℓ = dp.proximity(pill_1, pill_2)
 
 # calculate proximity gradients
-∂ℓ_∂r1, ∂ℓ_∂p1, ∂ℓ_∂r2, ∂ℓ_∂p2 = dp.pill_proximity_jacobians(pill_1, pill_2)
+∂ℓ_∂r1, ∂ℓ_∂p1, ∂ℓ_∂r2, ∂ℓ_∂p2 = dp.proximity_jacobians(pill_1, pill_2)
 ```
